@@ -16,7 +16,7 @@ A classic game of Rock Paper Scissors (and more!) built with React. Play against
 Get started by cloning the repository:
 
 ```bash
-git clone https://github.com/Bensaxxy/rock-paper-scissors.git
+git clone https://github.com/rafi983/rock_paper_scissors.git
 ```
 
 Then, follow these steps:
@@ -102,15 +102,3 @@ Contributions are welcome! Here’s how you can help:
 ## 📜 License
 
 This project is under the [MIT License](link-to-license).
-
-## 👨‍💻 Author Info
-
-*   Twitter: [https://twitter.com/your-twitter-handle](https://twitter.com/your-twitter-handle)
-*   LinkedIn: [https://www.linkedin.com/in/your-linkedin-profile](https://www.linkedin.com/in/your-linkedin-profile)
-*   Frontend Mentor: [https://www.frontendmentor.io/profile/Bensaxxy](https://www.frontendmentor.io/profile/Bensaxxy)
-*   GitHub: [https://github.com/Bensaxxy](https://github.com/Bensaxxy)
-
-## 🛡️ Badges
-
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
