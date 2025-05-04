@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-display: "Barlow Semi Condensed", "sans-serif";
+
+  --Scissors-Gradient: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --Paper-Gradient: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --Rock-Gradient: linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --Lizard-Gradient: linear-gradient(to bottom, hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  --Spock-Gradient: linear-gradient(to bottom, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+  --Background-Gradient: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  
+  --Dark-Text: hsl(229, 25%, 31%);
+  --Score-Text: hsl(229, 64%, 46%);
+  --Header-Outline: hsl(217, 16%, 45%);
+}
+
+.winner-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.winner-glow::before,
+.winner-glow::after,
+.winner-glow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Inner glow (brightest part) */
+.winner-glow::before {
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.4) 40%,
+    transparent 70%
+  );
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Middle glow */
+.winner-glow::after {
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.2) 30%,
+    transparent 60%
+  );
+}
+
+/* Outer glow (most subtle) */
+.winner-glow::after {
+  width: calc(100% + 150px);
+  height: calc(100% + 150px);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 50%
+  );
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
